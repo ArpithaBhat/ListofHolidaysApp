@@ -5,14 +5,15 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
-export class Holidays {
-  name :string;
-  Date: string;
-  observerved : boolean;
-}
+
 @Injectable()
 export class ListofHolidays{
 
+      myHolidays : any={
+    name: String,
+    Date: String
+
+  }
  constructor(private _http: Http) { }
   private _listofholidaysUrl :string = "https://holidayapi.com/v1/holidays?key=00eef410-6d1a-4a47-a7bb-34174392852c&country=US&year=2015"
 
